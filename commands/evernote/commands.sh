@@ -16,7 +16,7 @@ function reconnect_android() {
 
 # Increments a number for creating new test accounts
 function generate_test_account() {
-  python ~/Documents/Development/scripts/generateTestAccount/main.py $1
+  python3 ~/.config/scripts/evernote/generate_test_account/main.py $1
 }
 
 function ignore_neutron_logs() {
