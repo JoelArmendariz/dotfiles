@@ -1,5 +1,14 @@
 #!bin/zsh
 
+function requiem() {
+    cd ~/Documents/Development/requiem-mono-repo/requiem/
+    nvim .
+}
+
+function cd_requiem() {
+    cd ~/Documents/Development/requiem-mono-repo/requiem/
+}
+
 # Start the Data Requiem local API
 function start_api() {
     cd ~/Documents/Development/requiem-mono-repo/requiem/services/requiem-api/
