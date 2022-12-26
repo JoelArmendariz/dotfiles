@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+
 -- Open netrw file tree
 vim.keymap.set("n", "<leader>n", vim.cmd.Ex)
 
@@ -45,10 +46,4 @@ vim.keymap.set("n", "<leader>l", "$")
 
 -- Misc
 vim.keymap.set('n', '<leader>cp', '<cmd>let @+=@%<CR>')
-
--- Not sure about these:
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
--- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
--- vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz")
-
+vim.keymap.set('n', ',', ':')
