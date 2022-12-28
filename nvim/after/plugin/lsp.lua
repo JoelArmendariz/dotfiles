@@ -27,6 +27,14 @@ lsp.setup_nvim_cmp({
 
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
+    vim.diagnostic.config{
+        virtual_text = {
+            source = false,
+            severity = {
+                min = vim.diagnostic.severity.ERROR,
+            },
+        },
+    }
 
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
