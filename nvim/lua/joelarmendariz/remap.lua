@@ -29,6 +29,10 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- Git status window
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
+vim.keymap.set("n", "<leader>dif", vim.cmd.Gvdiffsplit);
+vim.keymap.set("n", "<leader>res", "<cmd>Gitsigns reset_hunk<CR>");
+vim.keymap.set("n", "<leader>prev", "<cmd>Gitsigns preview_hunk<CR>");
+vim.keymap.set("n", "<leader>bl", "<cmd>Gitsigns toggle_current_line_blame<CR>");
 
 -- File runners
 vim.keymap.set("n", "<leader>rf", "<cmd>!ts-node %<CR>")

@@ -2,15 +2,18 @@
 
 # Open neutron in nvim
 function neutron() {
-  nvim ~/Documents/Development/neutron
+  cd ~/Documents/Development/neutron
+  nvim
 }
 
 # Open maestro in nvim
 function maestro() {
-  nvim ~/Documents/Development/experiments-service
+  cd ~/Documents/Development/experiments-service
+  nvim
 }
 
 # Open ion in nvim
 function ion() {
-  nvim ~/Documents/Development/ion
+  cd ~/Documents/Development/ion
+  nvim
 }
