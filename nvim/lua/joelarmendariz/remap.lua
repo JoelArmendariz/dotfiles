@@ -25,9 +25,7 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>y", "\"+Y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 
-vim.keymap.set("n", "Q", "<nop>")
-
--- Git status window
+-- Git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
 vim.keymap.set("n", "<leader>dif", vim.cmd.Gvdiffsplit);
 vim.keymap.set("n", "<leader>res", "<cmd>Gitsigns reset_hunk<CR>");
@@ -48,6 +46,10 @@ vim.keymap.set("n", "<leader>j", "G")
 vim.keymap.set("n", "<leader>k", "gg")
 vim.keymap.set("n", "<leader>l", "$")
 
+-- Popups
+vim.keymap.set("n", "<leader>f", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
+
 -- Misc
 vim.keymap.set('n', '<leader>cp', '<cmd>let @+=@%<CR>')
 vim.keymap.set('n', ',', ':')
+vim.keymap.set("n", "Q", "<nop>")

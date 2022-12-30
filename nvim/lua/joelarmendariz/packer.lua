@@ -5,7 +5,8 @@ return require('packer').startup(function(use)
 
   -- Navigation
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  'nvim-telescope/telescope.nvim', branch = '0.1.x',
+	  -- 'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
@@ -23,12 +24,7 @@ return require('packer').startup(function(use)
   use {
       'lewis6991/gitsigns.nvim',
       config = function()
-          require('gitsigns').setup({
-              current_line_blame = true,
-              current_line_blame_opts = {
-                  delay = 250
-              }
-          })
+          require('gitsigns').setup()
       end
   }
 
