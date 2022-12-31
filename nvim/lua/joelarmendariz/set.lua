@@ -28,3 +28,5 @@ vim.g.mapleader = " "
 
 vim.cmd('set signcolumn=yes:1')
 vim.cmd('set background=dark')
+vim.cmd('set shortmess=I')
+
