@@ -46,9 +46,6 @@ vim.keymap.set("n", "<leader>j", "G")
 vim.keymap.set("n", "<leader>k", "gg")
 vim.keymap.set("n", "<leader>l", "$")
 
--- Popups
-vim.keymap.set("n", "<leader>f", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
-
 -- Misc
 vim.keymap.set('n', '<leader>cp', '<cmd>let @+=@%<CR>')
 vim.keymap.set('n', ',', ':')
