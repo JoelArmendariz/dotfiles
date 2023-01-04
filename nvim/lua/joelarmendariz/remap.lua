@@ -26,7 +26,7 @@ vim.keymap.set("n", "<leader>y", "\"+Y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 
 -- Git
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
+vim.keymap.set("n", "<leader>gs", "<cmd>topleft vert Git<CR>");
 vim.keymap.set("n", "<leader>dif", vim.cmd.Gvdiffsplit);
 vim.keymap.set("n", "<leader>res", "<cmd>Gitsigns reset_hunk<CR>");
 vim.keymap.set("n", "<leader>prev", "<cmd>Gitsigns preview_hunk<CR>");

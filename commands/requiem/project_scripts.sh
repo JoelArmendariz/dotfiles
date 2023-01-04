@@ -2,7 +2,7 @@
 
 function requiem() {
     cd ~/Documents/Development/requiem-mono-repo/requiem/
-    nvim .
+    nvim
 }
 
 function cd_requiem() {
