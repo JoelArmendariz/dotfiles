@@ -60,6 +60,12 @@ return require('packer').startup(function(use)
       config = function() require("nvim-autopairs").setup {} end
   }
   use {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
+  }
+  use {
       'numToStr/Comment.nvim',
       config = function()
           require('Comment').setup()
