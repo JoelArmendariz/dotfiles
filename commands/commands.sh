@@ -16,6 +16,7 @@ source ~/.config/commands/evernote/commands.sh
 
 # Requiem
 source ~/.config/commands/requiem/project_scripts.sh
+source ~/.config/commands/requiem/tmux.sh
 
 function source_commands() {
     source ~/.config/commands/commands.sh
