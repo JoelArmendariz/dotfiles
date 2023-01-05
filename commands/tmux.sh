@@ -42,6 +42,7 @@ function tscripts() {
     tmux new -s scripts
   fi
 }
+
 # Open gameology tmux server or create it
 function tg() {
   SERVERS=$(eval 'tmux ls')
@@ -51,5 +52,18 @@ function tg() {
     tmux a -t gameology
   else
     tmux new -s gameology
+  fi
+}
+
+# Open qmk tmux server or create it
+function tq() {
+  SERVERS=$(eval 'tmux ls')
+  QMK='qmk'
+  if [[ "$SERVERS" == *"$QMK"* ]]
+  then
+    tmux a -t qmk
+  else
+    cd ~/qmk_firmware/
+    tmux new -s qmk
   fi
 }

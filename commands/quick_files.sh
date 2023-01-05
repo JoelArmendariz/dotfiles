@@ -2,18 +2,24 @@
 
 # Open this file
 function commands() {
-  cd ~/.config/commands/.commands.sh
-  nvim .
+  cd ~/.config/commands/
+  nvim
 }
 
 # Open gameology in nvim
 function gameology() {
   cd ~/Documents/Development/PersonalProjects/gameology-in-react
-  nvim .
+  nvim
+}
+
+# Open snippets directory in nvim
+function snippets() {
+  cd ~/Documents/Development/snippets
+  nvim
 }
 
 # Open ts snippets file in nvim
-function snippets() {
+function snippetsts() {
   cd ~/Documents/Development/snippets
   nvim index.ts
 }
@@ -32,8 +38,8 @@ function snippetspy() {
 
 # Open scripts directory in nvim
 function scripts() {
-  cd ~/Documents/Development/scripts
-  nvim .
+  cd ~/.config/scripts
+  nvim
 }
 
 # Open .zshrc in nvim
@@ -45,12 +51,12 @@ function zshrc() {
 # Open config directory in nvim
 function config() {
   cd ~/.config
-  nvim .
+  nvim
 }
 
 # Open alacritty.yml in nvim
 function alacrittyyml() {
-  cd ~/.config/alacritty/alacritty.yml
-  nvim .
+  cd ~/.config/alacritty
+  nvim alacritty.yml
 }
 
