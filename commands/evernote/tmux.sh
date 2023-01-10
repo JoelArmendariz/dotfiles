@@ -21,7 +21,7 @@ function tm() {
   then
     tmux a -t maestro
   else
-    cd ~/Documents/Development/maestro/
+    cd ~/Documents/Development/experiments-service/
     tmux new -s maestro
   fi
 }
