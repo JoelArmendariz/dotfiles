@@ -2,7 +2,7 @@
 
 # Open this file
 function commands() {
-  cd ~/.config/commands/.commands.sh
+  cd ~/.config/commands/
   nvim
 }
 
@@ -12,8 +12,14 @@ function gameology() {
   nvim
 }
 
-# Open ts snippets file in nvim
+# Open snippets directory in nvim
 function snippets() {
+  cd ~/Documents/Development/snippets
+  nvim
+}
+
+# Open ts snippets file in nvim
+function snippetsts() {
   cd ~/Documents/Development/snippets
   nvim index.ts
 }
@@ -32,7 +38,7 @@ function snippetspy() {
 
 # Open scripts directory in nvim
 function scripts() {
-  cd ~/Documents/Development/scripts
+  cd ~/.config/scripts
   nvim
 }
 
@@ -50,7 +56,7 @@ function config() {
 
 # Open alacritty.yml in nvim
 function alacrittyyml() {
-  cd ~/.config/alacritty/alacritty.yml
-  nvim
+  cd ~/.config/alacritty
+  nvim alacritty.yml
 }
 

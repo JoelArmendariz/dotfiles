@@ -8,6 +8,7 @@ function tn() {
   then
     tmux a -t neutron
   else
+    cd ~/Documents/Development/neutron/
     tmux new -s neutron
   fi
 }
@@ -20,6 +21,7 @@ function tm() {
   then
     tmux a -t maestro
   else
+    cd ~/Documents/Development/maestro/
     tmux new -s maestro
   fi
 }
@@ -32,6 +34,7 @@ function ti() {
   then
     tmux a -t ion
   else
+    cd ~/Documents/Development/ion/
     tmux new -s ion
   fi
 }

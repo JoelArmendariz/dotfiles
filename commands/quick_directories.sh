@@ -29,3 +29,6 @@ function cd_advent_of_code() {
   cd ~/Documents/Development/PersonalProjects/advent-of-code
 }
 
+function cd_qmk() {
+  cd ~/qmk_firmware/
+}
