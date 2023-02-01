@@ -47,4 +47,19 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
 end)
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- disable virtual text
+    virtual_text = false,
+
+    -- show signs
+    signs = true,
+
+    -- delay update diagnostics
+    update_in_insert = false,
+    -- display_diagnostic_autocmds = { "InsertLeave" },
+
+  }
+)
+
 lsp.setup()
