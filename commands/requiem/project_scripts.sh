@@ -2,12 +2,12 @@
 
 function requiem() {
     cd ~/Documents/Development/requiem-mono-repo/requiem/
-    nvim
+    lvim
 }
 
 function requiem_ui() {
     cd ~/Documents/Development/requiem-mono-repo/requiem/services/requiem-ui/
-    nvim
+    lvim
 }
 
 function cd_requiem() {
@@ -32,10 +32,10 @@ function generate_requiem_models() {
 }
 
 function secretsyml() {
-    nvim /etc/requiem/secrets.yml
+    lvim /etc/requiem/secrets.yml
 }
 
 function settingsyml() {
-    nvim /etc/requiem/settings.yml
+    lvim /etc/requiem/settings.yml
 }
 

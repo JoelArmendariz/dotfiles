@@ -1,19 +1,19 @@
 #!bin/zsh
 
-# Open neutron in nvim
+# Open neutron in lvim
 function neutron() {
   cd ~/Documents/Development/neutron
-  nvim
+  lvim
 }
 
-# Open maestro in nvim
+# Open maestro in lvim
 function maestro() {
   cd ~/Documents/Development/experiments-service
-  nvim
+  lvim
 }
 
-# Open ion in nvim
+# Open ion in lvim
 function ion() {
   cd ~/Documents/Development/ion
-  nvim
+  lvim
 }
