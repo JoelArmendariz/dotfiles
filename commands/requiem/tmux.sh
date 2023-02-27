@@ -8,7 +8,7 @@ function tr() {
   then
     tmux a -t requiem
   else
-    cd ~/Documents/Development/requiem-mono-repo/requiem/
+    cd ~/Documents/Development/requiem/
     tmux new -s requiem
   fi
 }

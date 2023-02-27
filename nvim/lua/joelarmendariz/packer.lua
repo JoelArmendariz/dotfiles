@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
 	  'rose-pine/neovim',
 	  as = 'rose-pine',
   })
+  use 'Mofiqul/vscode.nvim'
 
   -- Git integration
   use('tpope/vim-fugitive')
