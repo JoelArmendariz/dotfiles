@@ -3,60 +3,60 @@
 # Open this file
 function commands() {
   cd ~/.config/commands/
-  lvim
+  nvim
 }
 
-# Open gameology in lvim
+# Open gameology in nvim
 function gameology() {
   cd ~/Documents/Development/PersonalProjects/gameology-in-react
-  lvim
+  nvim
 }
 
-# Open snippets directory in lvim
+# Open snippets directory in nvim
 function snippets() {
   cd ~/Documents/Development/snippets
-  lvim
+  nvim
 }
 
-# Open ts snippets file in lvim
+# Open ts snippets file in nvim
 function snippetsts() {
   cd ~/Documents/Development/snippets
-  lvim index.ts
+  nvim index.ts
 }
 
-# Open js snippets file in lvim
+# Open js snippets file in nvim
 function snippetsjs() {
   cd ~/Documents/Development/snippets
-  lvim index.js
+  nvim index.js
 }
 
-# Open py snippets file in lvim
+# Open py snippets file in nvim
 function snippetspy() {
   cd ~/Documents/Development/snippets
-  lvim main.py
+  nvim main.py
 }
 
-# Open scripts directory in lvim
+# Open scripts directory in nvim
 function scripts() {
   cd ~/.config/scripts
-  lvim
+  nvim
 }
 
-# Open .zshrc in lvim
+# Open .zshrc in nvim
 function zshrc() {
   cd ~
-  lvim .zshrc
+  nvim .zshrc
 }
 
-# Open config directory in lvim
+# Open config directory in nvim
 function config() {
   cd ~/.config
-  lvim
+  nvim
 }
 
-# Open alacritty.yml in lvim
+# Open alacritty.yml in nvim
 function alacrittyyml() {
   cd ~/.config/alacritty
-  lvim alacritty.yml
+  nvim alacritty.yml
 }
 

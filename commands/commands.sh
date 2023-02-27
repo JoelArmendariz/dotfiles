@@ -8,12 +8,6 @@ source ~/.config/commands/quick_directories.sh
 source ~/.config/commands/tmux.sh
 source ~/.config/commands/utils.sh
 
-# Evernote
-source ~/.config/commands/evernote/tmux.sh
-source ~/.config/commands/evernote/quick_directories.sh
-source ~/.config/commands/evernote/quick_files.sh
-source ~/.config/commands/evernote/commands.sh
-
 # Requiem
 source ~/.config/commands/requiem/project_scripts.sh
 source ~/.config/commands/requiem/tmux.sh

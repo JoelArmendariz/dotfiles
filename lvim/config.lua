@@ -197,22 +197,22 @@ lvim.plugins = {
 }
 
 -- HARPOON CONFIG
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-lvim.keys.normal_mode["<leader>tm"] = mark.add_file
-lvim.keys.normal_mode["<leader>tj"] = function()
-  ui.nav_file(1)
-end
-lvim.keys.normal_mode["<leader>tk"] = function()
-  ui.nav_file(2)
-end
-lvim.keys.normal_mode["<leader>tl"] = function()
-  ui.nav_file(3)
-end
-lvim.keys.normal_mode["<leader>th"] = function()
-  ui.nav_file(4)
-end
-lvim.keys.normal_mode["<c-e>"] = ui.toggle_quick_menu
+-- local mark = require("harpoon.mark")
+-- local ui = require("harpoon.ui")
+-- lvim.keys.normal_mode["<leader>tm"] = mark.add_file
+-- lvim.keys.normal_mode["<leader>tj"] = function()
+-- ui.nav_file(1)
+-- end
+-- lvim.keys.normal_mode["<leader>tk"] = function()
+-- ui.nav_file(2)
+-- end
+-- lvim.keys.normal_mode["<leader>tl"] = function()
+-- ui.nav_file(3)
+-- end
+-- lvim.keys.normal_mode["<leader>th"] = function()
+-- ui.nav_file(4)
+-- end
+-- lvim.keys.normal_mode["<c-e>"] = ui.toggle_quick_menu
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
