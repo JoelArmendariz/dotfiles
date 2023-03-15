@@ -11,6 +11,11 @@ source ~/.config/commands/utils.sh
 # Requiem
 source ~/.config/commands/requiem/project_scripts.sh
 source ~/.config/commands/requiem/tmux.sh
+source ~/.config/commands/requiem/utils.sh
+
+# StoryFit
+source ~/.config/commands/storyfit/project_scripts.sh
+source ~/.config/commands/storyfit/tmux.sh
 
 function source_commands() {
     source ~/.config/commands/commands.sh
