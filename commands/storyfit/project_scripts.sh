@@ -24,5 +24,5 @@ function run_storyfit_ui() {
 }
 
 function start_postgres() {
-  pg_ctl -D ~/opt/local/var/postgres start
+  pg_ctl -D ~/usr/local/var/postgres start
 }
