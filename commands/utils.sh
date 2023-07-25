@@ -26,3 +26,8 @@ function pi() {
   ssh pi@192.168.1.227
 }
 
+function build_karabiner() {
+  cd ~/.config/karabiner/karabiner-config/
+  yarn run build
+  cd -
+}

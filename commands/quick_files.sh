@@ -60,3 +60,12 @@ function alacrittyyml() {
   nvim alacritty.yml
 }
 
+function qmk() {
+  cd ~/Documents/Development/qmk_firmware/
+  nvim
+}
+
+function karabiner_config() {
+  cd ~/.config/karabiner/karabiner-config/src/
+  nvim index.ts
+}
