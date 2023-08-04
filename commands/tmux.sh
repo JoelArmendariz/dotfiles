@@ -28,6 +28,7 @@ function tc() {
   then
     tmux a -t config
   else
+    cd ~/.config/
     tmux new -s config
   fi
 }
