@@ -18,6 +18,9 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 
+vim.g.python3_host_prog = '/opt/homebrew/bin/python3'
+vim.g.python3_host_extra_paths = { '~/Documents/Development/storyfit-platform/backend/script_manager/' }
+
 vim.g.netrw_banner = 0
 
 vim.opt.termguicolors = true

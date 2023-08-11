@@ -15,9 +15,13 @@ function gpd() {
   git pull origin develop
 }
 
-# Add all files except the Neutron iterables
-function gae() {
-  git add --all -- ':!ios/3rd Party/Iterable' ':!ios/Neutron.xcodeproj/project.pbxproj' ':!ios/Podfile.lock' ':!src/base/react-native-note-uploader/ios/RNNoteUploader.xcodeproj/project.pbxproj' && git status
+function gb() {
+  if [ git branch | egrep "^\*?[[:space:]]+{BRANCH}$" ]
+  then
+    git checkout $1
+  else
+    git checkout -b $1
+  fi
 }
 
 # Open lazygit

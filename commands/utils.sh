@@ -26,3 +26,6 @@ function pi() {
   ssh pi@192.168.1.227
 }
 
+function managepy() {
+  python manage.py $1
+}
