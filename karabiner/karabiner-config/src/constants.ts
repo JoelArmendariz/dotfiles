@@ -1,3 +1,5 @@
+import { ModifierParam } from "karabiner.ts";
+
 export const QWERTY = [
   "q",
   "w",
@@ -63,3 +65,11 @@ export const DVORAK_QWERTY_MAP = {
   ".": "v",
   "/": "z",
 } as const;
+
+export const MODIFIERS: ModifierParam[] = [
+  "right_shift",
+  "left_shift",
+  "right_control",
+  "left_control",
+  "command",
+];

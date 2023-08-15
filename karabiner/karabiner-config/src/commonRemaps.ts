@@ -4,8 +4,6 @@ import { NumberKeyValue, layer, map, withMapper } from "karabiner.ts";
 export const COMMON_REMAPS = [
   map("⇪").to("left_control").toIfAlone("⎋"),
   map("left⌘").to("left⌘").toIfAlone("delete_or_backspace"),
-  map(";").to(";", "right_shift"),
-  map(";", "left_shift").to(";"),
 ];
 
 // Useful for Karabiner definitions
