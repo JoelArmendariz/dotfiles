@@ -31,3 +31,7 @@ function build_karabiner() {
   yarn run build
   cd -
 }
+
+function managepy() {
+  python manage.py $1
+}

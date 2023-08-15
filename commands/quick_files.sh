@@ -14,25 +14,19 @@ function gameology() {
 
 # Open snippets directory in nvim
 function snippets() {
-  cd ~/Documents/Development/snippets
+  cd ~/.config/snippets/
   nvim
 }
 
 # Open ts snippets file in nvim
 function snippetsts() {
-  cd ~/Documents/Development/snippets
+  cd ~/.config/snippets/
   nvim index.ts
-}
-
-# Open js snippets file in nvim
-function snippetsjs() {
-  cd ~/Documents/Development/snippets
-  nvim index.js
 }
 
 # Open py snippets file in nvim
 function snippetspy() {
-  cd ~/Documents/Development/snippets
+  cd ~/.config/snippets
   nvim main.py
 }
 

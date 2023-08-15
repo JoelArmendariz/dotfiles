@@ -4,3 +4,4 @@ configstore
 
 nvim/plugin/packer_compiled.lua
 lvim/plugin/packer_compiled.lua
+karabiner/karabiner-config/node_modules

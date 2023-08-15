@@ -1,4 +1,5 @@
 import {
+  layer,
   simlayer,
   map,
   NumberKeyValue,
@@ -8,11 +9,7 @@ import {
 } from "karabiner.ts";
 
 writeToProfile("Default", [
-  // It is not required, but recommended to put symbol alias to layers,
-  // (If you type fast, use simlayer instead, see https://evan-liu.github.io/karabiner.ts/rules/simlayer)
-  // to make it easier to write '←' instead of 'left_arrow'.
-  // Supported alias: https://github.com/evan-liu/karabiner.ts/blob/main/src/utils/key-alias.ts
-  simlayer("`", "symbol-mode").manipulators([
+  layer("`", "symbol-mode").manipulators([
     //     / + [ 1    2    3    4    5 ] =>
     withMapper(["⌘", "⌥", "⌃", "⇧", "⇪"])((k, i) =>
       map((i + 1) as NumberKeyValue).toPaste(k)
@@ -22,20 +19,38 @@ writeToProfile("Default", [
     ),
   ]),
 
-  // simlayer("a", "").manipulators([
-  //   map("h").to("←"),
-  //   map("j").to("↓"),
-  //   map("k").to("↑"),
-  //   map("l").to("→"),
-  // ]),
+  simlayer("⎋").manipulators([
+    map("w").to(2, "right_shift"),
+    map("e").to(3, "right_shift"),
+    map("r").to("\\", "right_shift"),
+    map("t").to("]"),
+    map("y").to("["),
+    map("u").to(9, "left_shift"),
+    map("i").to(0, "left_shift"),
+    map("o").to("[", "left_shift"),
+    map("p").to("]", "left_shift"),
+    map("a").to(1, "right_shift"),
+    map("s").to("/", "right_shift"),
+    map("d").to("/", "right_shift"),
+    map("f").to("/", "right_shift"),
+    map("g").to("/", "right_shift"),
+    map("h").to("←"),
+    map("j").to("↓"),
+    map("k").to("↑"),
+    map("l").to("→"),
+    map("/").to(";"),
+    map("m").to(",", "left_shift"),
+    map(",").to("="),
+    map(".").to(".", "left_shift"),
+  ]),
 
   rule("Key mapping").manipulators([
-    // Mod-taps
+    // config key mappings
     map("⇪").to("left_control").toIfAlone("⎋"),
+    map("⇪").to("⎋"),
     map("/").to("left_shift").toIfAlone("/"),
-
-    // Remaps
-    map(";").to(";", "left_shift"),
+    map("left⌘").to("left⌘").toIfAlone("delete_or_backspace"),
+    map(";").to(";", "right_shift"),
     map(";", "left_shift").to(";"),
   ]),
 ]);
