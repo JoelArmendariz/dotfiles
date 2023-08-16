@@ -24,9 +24,9 @@ const DVORAK_ALPHAS_MANIPULATORS = Object.entries(DVORAK_QWERTY_MAP).reduce(
 export default function writeDvorakIU() {
   writeToProfile("DVORAK_IU", [
     rule("Key mapping").manipulators([
-      ...COMMON_REMAPS,
+      // ...COMMON_REMAPS,
       ...DVORAK_ALPHAS_MANIPULATORS,
     ]),
-    SPECIAL_SYMBOLS_LAYER,
+    // SPECIAL_SYMBOLS_LAYER,
   ]);
 }
