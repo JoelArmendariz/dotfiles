@@ -1,5 +1,5 @@
 import { FromKeyParam, map, rule, writeToProfile } from "karabiner.ts";
-import { DVORAK_QWERTY_MAP } from "./constants";
+import { DVORAK_QWERTY_MAP, MODIFIERS } from "./constants";
 import { COMMON_REMAPS, SPECIAL_SYMBOLS_LAYER } from "./commonRemaps";
 
 // Remap all alpha keys from QWERTY to DvorakIU
@@ -8,13 +8,8 @@ const DVORAK_ALPHAS_MANIPULATORS = Object.entries(DVORAK_QWERTY_MAP).reduce(
     ...acc,
     ...[
       map(qwertyChar as FromKeyParam).to(dvorakChar),
-      map(qwertyChar as FromKeyParam, "right_shift").to(
-        dvorakChar,
-        "right_shift"
-      ),
-      map(qwertyChar as FromKeyParam, "left_shift").to(
-        dvorakChar,
-        "left_shift"
+      ...MODIFIERS.map((modifier) =>
+        map(qwertyChar as FromKeyParam, modifier).to(dvorakChar, modifier)
       ),
     ],
   ],
@@ -24,9 +19,9 @@ const DVORAK_ALPHAS_MANIPULATORS = Object.entries(DVORAK_QWERTY_MAP).reduce(
 export default function writeDvorakIU() {
   writeToProfile("DVORAK_IU", [
     rule("Key mapping").manipulators([
-      // ...COMMON_REMAPS,
+      ...COMMON_REMAPS,
       ...DVORAK_ALPHAS_MANIPULATORS,
     ]),
-    // SPECIAL_SYMBOLS_LAYER,
+    SPECIAL_SYMBOLS_LAYER,
   ]);
 }

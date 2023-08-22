@@ -53,7 +53,7 @@ export const DVORAK_QWERTY_MAP = {
   j: "h",
   k: "t",
   l: "n",
-  ";": "s",
+  semicolon: "s",
   z: ";",
   x: "q",
   c: "j",
@@ -64,12 +64,19 @@ export const DVORAK_QWERTY_MAP = {
   ",": "w",
   ".": "v",
   "/": "z",
+  "'": "-",
+  "[": "/",
+  "]": "=",
+  "-": "[",
+  "=": "]",
 } as const;
 
 export const MODIFIERS: ModifierParam[] = [
-  "right_shift",
-  "left_shift",
-  "right_control",
-  "left_control",
+  "shift",
+  "control",
   "command",
+  "option",
+  "Hyper",
+  "Meh",
+  "⌘⇧",
 ];
