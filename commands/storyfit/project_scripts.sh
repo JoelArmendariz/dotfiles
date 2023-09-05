@@ -61,6 +61,10 @@ function stf_ssh_storymetrics_prod() {
   ssh -i ~/.ssh/storyfit-models-api.pem ec2-user@ec2-54-147-140-192.compute-1.amazonaws.com
 }
 
+function stf_ssh_insights_scripts() {
+  ssh -i ~/.ssh/insights-scripts.pem ec2-user@ec2-54-160-146-164.compute-1.amazonaws.com
+}
+
 function follow_docker_logs() {
   CONTAINER_ID=$(docker ps -aqf "name=^storyfit-platform-backend-1$")
   docker logs $CONTAINER_ID -f
