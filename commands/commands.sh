@@ -18,6 +18,9 @@ source ~/.config/commands/requiem/quick_files.sh
 source ~/.config/commands/storyfit/project_scripts.sh
 source ~/.config/commands/storyfit/tmux.sh
 
+# KindHealth
+source ~/.config/commands/kindhealth/tmux.sh
+
 function source_commands() {
     source ~/.config/commands/commands.sh
 }
