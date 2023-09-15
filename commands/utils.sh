@@ -6,7 +6,7 @@ function source_zshrc() {
 
 # Go to website in Chrome
 function goto() {
-  open -a "Google Chrome" http://$1.com
+  open -a "Arc" http://$1.com
 }
 
 # Copy current directory to clipboard

@@ -12,6 +12,7 @@ source ~/.config/commands/utils.sh
 source ~/.config/commands/requiem/project_scripts.sh
 source ~/.config/commands/requiem/tmux.sh
 source ~/.config/commands/requiem/utils.sh
+source ~/.config/commands/requiem/quick_files.sh
 
 # StoryFit
 source ~/.config/commands/storyfit/project_scripts.sh
