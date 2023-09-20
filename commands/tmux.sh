@@ -33,14 +33,15 @@ function tc() {
   fi
 }
 
-function tscripts() {
+function tkit() {
   SERVERS=$(eval 'tmux ls')
-  SCRIPTS='scripts'
-  if [[ "$SERVERS" == *"$SCRIPTS"* ]]
+  KIT='kit'
+  if [[ "$SERVERS" == *"$KIT"* ]]
   then
-    tmux a -t scripts
+    tmux a -t kit
   else
-    tmux new -s scripts
+    cd ~/.kenv/scripts/
+    tmux new -s kit
   fi
 }
 
