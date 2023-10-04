@@ -8,6 +8,7 @@ export default function writeDefault() {
     rule("Key mapping").manipulators([
       ...COMMON_REMAPS,
       map("/").to("left_shift").toIfAlone("/"),
+      map("right⌘").to("left_control"),
       map(";").to(";", "right_shift"),
       map(";", "left_shift").to(";"),
     ]),

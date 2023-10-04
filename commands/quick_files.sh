@@ -36,6 +36,11 @@ function scripts() {
   nvim
 }
 
+# Open kit scripts directory in nvim
+function kit() {
+  nvim ~/.config/.kenv/scripts
+}
+
 # Open .zshrc in nvim
 function zshrc() {
   cd ~

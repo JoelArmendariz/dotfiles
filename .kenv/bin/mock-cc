@@ -1,0 +1,9 @@
+#!/bin/sh
+
+NODE_NO_WARNINGS=1 \
+KENV=$(cd "$(dirname ${BASH_SOURCE[0]})"/.. &> /dev/null && pwd) \
+/Users/joelarmendariz/.knode/bin/node \
+--experimental-loader /Users/joelarmendariz/.kit/build/loader.js \
+/Users/joelarmendariz/.kit/run/terminal.js \
+/Users/joelarmendariz/.config/.kenv/scripts/mock-cc.ts \
+"$@"

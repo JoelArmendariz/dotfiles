@@ -11,3 +11,8 @@ karabiner/automatic_backups/
 snippets/index.ts
 snippets/main.py
 snippets/data.json
+
+.kenv/node_modules
+.kenv/assets
+.kenv/cache
+.kenv/kenvs
