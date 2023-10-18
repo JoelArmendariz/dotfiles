@@ -1,8 +1,7 @@
 #!bin/zsh
 
 function storyfit() {
-  cd ~/Documents/Development/storyfit-platform/
-  nvim
+  $EDITOR ~/Documents/Development/storyfit-platform/
 }
 
 function cd_storyfit() {

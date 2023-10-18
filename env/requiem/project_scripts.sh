@@ -1,19 +1,5 @@
 #!bin/zsh
 
-function requiem() {
-    cd ~/Documents/Development/requiem/
-    nvim
-}
-
-function requiem_ui() {
-    cd ~/Documents/Development/requiem/services/requiem-ui/
-    nvim
-}
-
-function cd_requiem() {
-    cd ~/Documents/Development/requiem/
-}
-
 # Start the Data Requiem local API
 function start_api() {
     cd ~/Documents/Development/requiem/services/requiem-api/
@@ -32,11 +18,11 @@ function generate_requiem_models() {
 }
 
 function secretsyml() {
-    nvim /etc/requiem/secrets.yml
+    $EDITOR /etc/requiem/secrets.yml
 }
 
 function settingsyml() {
-    nvim /etc/requiem/settings.yml
+    $EDITOR /etc/requiem/settings.yml
 }
 
 export RQ_EC2_NAME="jarmendariz-dev" # replace with your instance name

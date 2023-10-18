@@ -9,5 +9,8 @@ auto-format = true
 normal = "block"
 select = "underline"
 
+[keys.normal]
+esc = ['collapse_selection', 'keep_primary_selection']
+
 [editor.file-picker]
 hidden = false

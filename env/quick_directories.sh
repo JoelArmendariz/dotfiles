@@ -10,7 +10,7 @@ function cd_portfolio() {
   cd ~/Documents/Development/PersonalProjects/portfolio
 }
 
-# Open scripts directory in nvim
+# Open scripts directory
 function cd_scripts() {
   cd ~/Documents/Development/scripts
 }

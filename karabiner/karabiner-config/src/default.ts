@@ -10,6 +10,7 @@ export default function writeDefault() {
       map("/").to("left_shift").toIfAlone("/"),
       map("right⌘").to("left_control"),
       map(";").to(";", "right_shift"),
+      map("right⌘").to("right_control"),
       map(";", "left_shift").to(";"),
     ]),
 
