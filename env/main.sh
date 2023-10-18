@@ -22,7 +22,7 @@ source ~/.config/env/storyfit/tmux.sh
 
 # KindHealth
 source ~/.config/env/kindhealth/tmux.sh
-source ~/.config/commands/kindhealth/utils.sh
+source ~/.config/env/kindhealth/utils.sh
 
 function source_env() {
     source ~/.config/env/main.sh
