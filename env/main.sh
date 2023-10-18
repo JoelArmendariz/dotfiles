@@ -8,6 +8,7 @@ source ~/.config/env/quick_files.sh
 source ~/.config/env/quick_directories.sh
 source ~/.config/env/tmux.sh
 source ~/.config/env/utils.sh
+source ~/.config/env/aliases.sh
 
 # Requiem
 source ~/.config/env/requiem/project_scripts.sh
