@@ -14,10 +14,6 @@ function cp() {
   pwd | pbcopy
 }
 
-function copy_branch() {
-  node ~/Documents/Development/scripts/copyGitBranch/index.js
-}
-
 function check_for_logs() {
   git diff | grep 'console.log'
 }

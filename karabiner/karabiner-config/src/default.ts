@@ -9,6 +9,7 @@ export default function writeDefault() {
       ...COMMON_REMAPS,
       map("/").to("left_shift").toIfAlone("/"),
       map(";").to(";", "right_shift"),
+      map("right⌘").to("right_control"),
       map(";", "left_shift").to(";"),
     ]),
 

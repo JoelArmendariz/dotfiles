@@ -50,3 +50,4 @@ vim.keymap.set("n", "<leader>l", "$")
 vim.keymap.set('n', '<leader>cp', '<cmd>let @+=@%<CR>')
 vim.keymap.set('n', ',', ':')
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<leader>open", "<cmd>!open % -a /Applications/Arc.app<CR>");
