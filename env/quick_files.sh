@@ -36,6 +36,11 @@ function scripts() {
   $EDITOR ~/.config/scripts/
 }
 
+# Open kit scripts directory in EDITOR
+function kit() {
+  $EDITOR ~/.config/.kenv/scripts
+}
+
 # Open .zshrc in EDITOR
 function zshrc() {
   $EDITOR ~/.zshrc

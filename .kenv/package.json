@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@johnlindquist/kit": "file:../../.kit",
+    "color-convert": "^2.0.1"
+  },
+  "engines": {
+    "node": "18.16.1",
+    "npm": "9.5.1"
+  }
+}

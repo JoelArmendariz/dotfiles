@@ -8,7 +8,7 @@ def source_commands():
         with open(Path.home() / ".zshrc", "r+") as f:
             source_command = "source ~/.config/commands/commands.sh"
             zshrc_contents = f.read()
-            if not source_command in zshrc_contents:
+            if source_command not in zshrc_contents:
                 print("No commands source found. Adding it now...")
                 f.write(f"\n{source_command}")
                 print("Source added to .zshrc")

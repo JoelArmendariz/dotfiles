@@ -20,6 +20,11 @@ function cd_config() {
   cd ~/.config
 }
 
+# Open the kenv directory
+function cd_kenv() {
+  cd ~/.config/.kenv
+}
+
 # Open nvim config directory
 function cd_nvim_config() {
   cd ~/.config/nvim
