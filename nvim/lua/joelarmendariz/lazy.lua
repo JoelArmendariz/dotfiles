@@ -12,8 +12,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = ' '
-
 require('lazy').setup('joelarmendariz.plugins', {
   checker = {
     enabled = true,
