@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- Open netrw file tree
-vim.keymap.set("n", "<leader>n", ':25Lex<CR>')
+vim.keymap.set("n", "<leader>n", vim.cmd.Ex)
 
 -- Move highlighted lines up or down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
