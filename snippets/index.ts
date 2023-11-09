@@ -1,5 +1,5 @@
-const arr:number[] = []; 
+const arr: number[] = [];
 
-arr[1] =5;
+arr[1] = 5;
 
 console.log(arr);
