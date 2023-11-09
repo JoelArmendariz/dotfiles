@@ -14,7 +14,7 @@ function tkh() {
 }
 
 # Open kio-components tmux server or create it
-function tkio() {
+function tkio_components() {
   SERVERS=$(eval 'tmux ls')
   KIO_COMPONENTS='kio-components'
   if [[ "$SERVERS" == *"$KIO_COMPONENTS"* ]]
@@ -23,5 +23,18 @@ function tkio() {
   else
     cd ~/Documents/Development/kh-kio-components/
     tmux new -s kio-components
+  fi
+}
+
+# Open kio-monorepo tmux server or create it
+function tkio() {
+  SERVERS=$(eval 'tmux ls')
+  KIO_MONOREPO='kio-monorepo'
+  if [[ "$SERVERS" == *"$KIO_MONOREPO"* ]]
+  then
+    tmux a -t kio-monorepo
+  else
+    cd ~/Documents/Development/kh-kio-monorepo/
+    tmux new -s kio-monorepo
   fi
 }
