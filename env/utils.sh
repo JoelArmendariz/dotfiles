@@ -31,3 +31,12 @@ function build_karabiner() {
 function managepy() {
   python manage.py $1
 }
+
+function fcd() {
+  local selected_folder
+  selected_folder=$(find . -maxdepth 1 -type d | sed 's|^\./||' | fzf)
+
+  if [ -n "$selected_folder" ]; then
+    cd "$selected_folder" || return 1
+  fi
+}

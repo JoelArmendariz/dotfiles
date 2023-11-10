@@ -34,6 +34,10 @@ return {
       vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
       vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
       vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+
+      vim.diagnostic.config {
+        virtual_text = false
+      }
     end)
 
     require('mason').setup({})
