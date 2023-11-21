@@ -9,6 +9,7 @@ source ~/.config/env/quick_directories.sh
 source ~/.config/env/tmux.sh
 source ~/.config/env/utils.sh
 source ~/.config/env/aliases.sh
+source ~/.config/env/keybinds.zsh
 
 # Requiem
 source ~/.config/env/requiem/project_scripts.sh

@@ -32,11 +32,45 @@ function managepy() {
   python manage.py $1
 }
 
+# Fuzzy match a directory and cd into it
 function fcd() {
   local selected_folder
-  selected_folder=$(find . -maxdepth 1 -type d | sed 's|^\./||' | fzf)
+  selected_folder=$(find . -type d | grep -vi 'node_modules' | sed 's|^\./||' | fzf)
 
   if [ -n "$selected_folder" ]; then
     cd "$selected_folder" || return 1
   fi
+}
+
+# Fuzzy match a file and open it in nvim
+function fv() {
+  local selected_file
+  selected_file=$(find . -type f | grep -vi 'node_modules' | sed 's|^\./||' | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')
+
+  if [ -n "$selected_file" ]; then
+    $EDITOR "$selected_file" || return 1
+  fi
+}
+
+function fhistory() {
+  local selected_command
+  selected_command=$(history | sed 's/^[^ ]* //' | fzf --tac)
+
+  if [ -n "$selected_command" ]; then
+    eval "$selected_command"
+  else
+    echo "No command selected."
+  fi
+}
+
+# Fuzzy search through clipboard contents
+function fclipboard() {
+    local clipboard_content
+    clipboard_content=$(pbpaste)
+
+    if [ -n "$clipboard_content" ]; then
+        echo "$clipboard_content" | fzf --ansi --preview="echo {}" --preview-window=wrap
+    else
+        echo "Clipboard is empty."
+    fi
 }
