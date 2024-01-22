@@ -26,6 +26,10 @@ source ~/.config/env/storyfit/tmux.sh
 source ~/.config/env/kindhealth/tmux.sh
 source ~/.config/env/kindhealth/utils.sh
 
+# WiseRock
+source ~/.config/env/wiserock/tmux.sh
+source ~/.config/env/wiserock/project_scripts.sh
+
 function source_env() {
     source ~/.config/env/main.sh
 }
