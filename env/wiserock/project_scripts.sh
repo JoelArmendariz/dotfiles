@@ -17,3 +17,8 @@ function start_wr_ui_remote() {
   cd ~/repos/wise-rock/apps/web/
   npm run start:dev
 }
+
+function start_wr_storybook() {
+  cd ~/repos/wise-rock/apps/web/
+  npm run storybook
+}

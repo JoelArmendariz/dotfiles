@@ -74,3 +74,9 @@ function fclipboard() {
         echo "Clipboard is empty."
     fi
 }
+
+# Kill a specific PORT
+function killPort() {
+  PID=$(echo $(lsof -n -i4TCP:$1) | awk 'NR==1{print $11}')
+  kill -9 $PID
+}
