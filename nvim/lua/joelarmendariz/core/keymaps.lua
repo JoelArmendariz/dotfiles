@@ -13,6 +13,7 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- Keep cursor in the middle of the screen when jumping vertically
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+--
 -- Keep cursor in the middle of the screen when / searching
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -35,6 +36,7 @@ vim.keymap.set("n", "<leader>bl", "<cmd>Gitsigns toggle_current_line_blame<CR>")
 -- File runners
 vim.keymap.set("n", "<leader>rf", "<cmd>!ts-node %<CR>")
 vim.keymap.set("n", "<leader>rpf", "<cmd>!python3 %<CR>")
+vim.keymap.set("n", "<leader>rrf", "<cmd>!cargo run<CR>")
 
 -- Window navigation
 vim.keymap.set("n", "<leader><leader>h", "<C-w>h")
