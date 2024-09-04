@@ -3,6 +3,7 @@
 # Start the Data Requiem local API
 function start_api() {
     cd ~/Documents/Development/requiem/services/requiem-api/
+    source venv/bin/activate
     poetry run uvicorn --app-dir src --reload --port 5000 app.main:app
 }
 

@@ -57,6 +57,19 @@ function tg() {
   fi
 }
 
+# Open layout-auditioner tmux server or create it
+function tl() {
+  SERVERS=$(eval 'tmux ls')
+  LAYOUT_AUDITIONER='layout-auditioner'
+  if [[ "$SERVERS" == *"$LAYOUT_AUDITIONER"* ]]
+  then
+    tmux a -t layout-auditioner
+  else
+    cd ~/Documents/Development/layout-auditioner/
+    tmux new -s layout-auditioner
+  fi
+}
+
 # Open qmk tmux server or create it
 function tq() {
   SERVERS=$(eval 'tmux ls')
@@ -65,7 +78,7 @@ function tq() {
   then
     tmux a -t qmk
   else
-    cd ~/qmk_firmware/
+    cd ~/Documents/Development/qmk_firmware/
     tmux new -s qmk
   fi
 }
@@ -80,5 +93,17 @@ function tnotes() {
   else
     cd_notes
     tmux new -s notes
+  fi
+}
+
+function ttypeit() {
+  SERVERS=$(eval 'tmux ls')
+  TYPEIT='typeit'
+  if [[ "$SERVERS" == *"$TYPEIT"* ]]
+  then
+    tmux a -t typeit
+  else
+    cd ~/Documents/Development/typeit/
+    tmux new -s typeit
   fi
 }

@@ -32,16 +32,6 @@ function managepy() {
   python manage.py $1
 }
 
-# Fuzzy match a directory and cd into it
-function fcd() {
-  local selected_folder
-  selected_folder=$(find . -type d | grep -vi 'node_modules' | sed 's|^\./||' | fzf)
-
-  if [ -n "$selected_folder" ]; then
-    cd "$selected_folder" || return 1
-  fi
-}
-
 # Fuzzy match a file and open it in nvim
 function fv() {
   local selected_file
@@ -49,17 +39,6 @@ function fv() {
 
   if [ -n "$selected_file" ]; then
     $EDITOR "$selected_file" || return 1
-  fi
-}
-
-function fhistory() {
-  local selected_command
-  selected_command=$(history | sed 's/^[^ ]* //' | fzf --tac)
-
-  if [ -n "$selected_command" ]; then
-    eval "$selected_command"
-  else
-    echo "No command selected."
   fi
 }
 

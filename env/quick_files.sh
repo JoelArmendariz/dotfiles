@@ -56,11 +56,6 @@ function alacrittyyml() {
   $EDITOR ~/.config/alacritty/alacritty.yml
 }
 
-# Open QMK directory in EDITOR
-function qmk() {
-  $EDITOR ~/Documents/Development/qmk_firmware/
-}
-
 # Open Karabiner config /src directory in EDITOR
 function karabiner() {
   $EDITOR ~/.config/karabiner/karabiner-config/src/

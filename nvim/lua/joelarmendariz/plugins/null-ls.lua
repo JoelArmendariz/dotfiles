@@ -11,7 +11,9 @@ return {
       sources = {
         -- diagnostics.eslint_d,
         diagnostics.flake8,
-        formatting.black,
+        formatting.black.with({
+          extra_args = { '--line-length=125' }
+        }),
         formatting.prettierd,
       },
       on_attach = function(client, bufnr)
