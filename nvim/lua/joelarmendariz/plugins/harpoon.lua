@@ -1,6 +1,15 @@
 return {
   'theprimeagen/harpoon',
   config = function()
+    local harpoon = require("harpoon")
+
+    harpoon.setup({
+      menu = {
+        width = 160,
+        height = 60
+      }
+    })
+
     local mark = require("harpoon.mark")
     local ui = require("harpoon.ui")
 
@@ -11,6 +20,5 @@ return {
     vim.keymap.set("n", "<C-k>", function() ui.nav_file(2) end)
     vim.keymap.set("n", "<C-l>", function() ui.nav_file(3) end)
     vim.keymap.set("n", "<C-h>", function() ui.nav_file(4) end)
-
   end
 }

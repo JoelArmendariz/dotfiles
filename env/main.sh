@@ -27,6 +27,7 @@ source ~/.config/env/kindhealth/tmux.sh
 source ~/.config/env/kindhealth/utils.sh
 
 # WiseRock
+source ~/.config/env/wiserock/main.sh
 source ~/.config/env/wiserock/tmux.sh
 source ~/.config/env/wiserock/project_scripts.sh
 

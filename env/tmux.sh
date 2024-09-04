@@ -69,3 +69,16 @@ function tq() {
     tmux new -s qmk
   fi
 }
+
+# Open notes tmux server or create it
+function tnotes() {
+  SERVERS=$(eval 'tmux ls')
+  NOTES='notes'
+  if [[ "$SERVERS" == *"$NOTES"* ]]
+  then
+    tmux a -t notes
+  else
+    cd_notes
+    tmux new -s notes
+  fi
+}

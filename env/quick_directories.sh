@@ -37,3 +37,7 @@ function cd_advent_of_code() {
 function cd_qmk() {
   cd ~/qmk_firmware/
 }
+
+function cd_notes() {
+  cd ~/Documents/notes/
+}

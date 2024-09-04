@@ -12,10 +12,11 @@ return {
     vim.keymap.set('n', '<leader>ps', function()
       builtin.grep_string({ search = vim.fn.input("Find All Query > ") });
     end)
+    vim.keymap.set('n', '<leader>gr', builtin.lsp_references, {})
 
     telescope.setup({
       pickers = {
-        current_buffer_fuzzy_find = { sorting_strategy = 'ascending' }
+        current_buffer_fuzzy_find = { sorting_strategy = 'descending' }
       },
     })
   end

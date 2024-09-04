@@ -10,9 +10,9 @@ export const COMMON_REMAPS = [
 export const SPECIAL_SYMBOLS_LAYER = layer("`", "symbol-mode").manipulators([
   //     / + [ 1    2    3    4    5 ] =>
   withMapper(["⌘", "⌥", "⌃", "⇧", "⇪"])((k, i) =>
-    map((i + 1) as NumberKeyValue).toPaste(k)
+    map((i + 1) as NumberKeyValue).toPaste(k),
   ),
   withMapper(["←", "→", "↑", "↓", "␣", "⏎", "⇥", "⎋", "⌫", "⌦", "⇪"])((k) =>
-    map(k).toPaste(k)
+    map(k).toPaste(k),
   ),
 ]);
