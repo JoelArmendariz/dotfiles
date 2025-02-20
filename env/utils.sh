@@ -53,3 +53,8 @@ function fclipboard() {
         echo "Clipboard is empty."
     fi
 }
+
+function type() {
+  echo -n > ~/.config/notes/scratchpad.txt
+  e ~/.config/notes/scratchpad.txt -c 'autocmd BufWritePost * silent !cat % | pbcopy'
+}
