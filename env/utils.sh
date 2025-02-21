@@ -58,4 +58,8 @@ function fclipboard() {
 function killPort() {
   PID=$(echo $(lsof -n -i4TCP:$1) | awk 'NR==1{print $11}')
   kill -9 $PID
+
+function type() {
+  echo -n > ~/.config/notes/scratchpad.txt
+  e ~/.config/notes/scratchpad.txt -c 'autocmd BufWritePost * silent !cat % | pbcopy'
 }
