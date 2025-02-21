@@ -1,15 +1,10 @@
 #!bin/zsh
 
 # Start local dev api
-function start_wr_api_local() {
+function start_wr_api_dev() {
   cd ~/repos/wise-rock/apps/api/
+  aws-sso-profile "wiserock-dev:PowerUserAccess"
   npm run dev
-}
-
-# Start local core-production api
-function start_wr_api_core() {
-  cd ~/repos/wise-rock/apps/api/
-  npm run dev:core-production
 }
 
 # Start local stage api
@@ -22,6 +17,12 @@ function start_wr_api_stage() {
 function start_wr_api_eer_staging() {
   cd ~/repos/wise-rock/apps/api/
   npm run dev:eer-staging
+}
+
+# Start local magnolia staging api
+function start_wr_api_magnolia_staging() {
+  cd ~/repos/wise-rock/apps/api/
+  npm run dev:magnolia-staging
 }
 
 # Start local e2e-testing api
@@ -64,6 +65,12 @@ function start_wr_e2e_runner() {
 function start_wr_ui_remote() {
   cd ~/repos/wise-rock/apps/web/
   npm run start:dev
+}
+
+function build_and_preview_web_e2e_testing() {
+  cd ~/repos/wise-rock/apps/web/
+  npm run build:e2e-testing
+  npm run preview:e2e-testing
 }
 
 function start_wr_storybook() {

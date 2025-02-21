@@ -12,7 +12,19 @@ return {
     vim.keymap.set('n', '<leader>ps', function()
       builtin.grep_string({ search = vim.fn.input("Find All Query > ") });
     end)
-    vim.keymap.set('n', '<leader>gr', builtin.lsp_references, {})
+    vim.keymap.set('n', '<leader>gr', function()
+      builtin.lsp_references {
+        layout_strategy = "horizontal",
+        layout_config = {
+          width = 0.75,
+          height = 0.8,
+          prompt_position = "top",
+        },
+        sorting_strategy = "ascending",
+        ignore_filename = false,
+        path_display = {"tail"}
+      } end,
+      {})
 
     telescope.setup({
       pickers = {
