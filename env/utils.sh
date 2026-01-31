@@ -28,10 +28,6 @@ function build_karabiner() {
   cd -
 }
 
-function managepy() {
-  python manage.py $1
-}
-
 # Fuzzy match a file and open it in nvim
 function fv() {
   local selected_file
@@ -58,8 +54,16 @@ function fclipboard() {
 function killPort() {
   PID=$(echo $(lsof -n -i4TCP:$1) | awk 'NR==1{print $11}')
   kill -9 $PID
+}
 
-function type() {
-  echo -n > ~/.config/notes/scratchpad.txt
-  e ~/.config/notes/scratchpad.txt -c 'autocmd BufWritePost * silent !cat % | pbcopy'
+function start_psql() {
+  brew services start postgresql@17
+}
+
+function stop_psql() {
+  brew services stop postgresql@17
+}
+
+function get_ip() {
+  ipconfig getifaddr en0
 }

@@ -1,6 +1,6 @@
 #!bin/zsh
 
-# tmux attach
+# tmux attach to
 function t() {
   tmux a -t $1
 }
@@ -15,9 +15,35 @@ function ts() {
   tmux ls
 }
 
+# tmux attach
+function tm() {
+  tmux attach
+}
+
 # tmux kill-server
 function tkill() {
   tmux kill-server
+}
+
+function tdev() {
+  local SESSION_NAME="${1:-dev}"
+
+  # If session already exists, just attach
+  if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+    tmux attach -t "$SESSION_NAME"
+    return
+  fi
+
+  tmux new-session -d -s "$SESSION_NAME" -n servers
+
+  # Create the other windows
+  tmux new-window -t "$SESSION_NAME" -n dev
+  tmux new-window -t "$SESSION_NAME" -n agent
+
+  tmux attach -t "$SESSION_NAME"
+
+  # Explicitly set agent as the active window
+  tmux select-window -t "$SESSION_NAME:agent"
 }
 
 # Open config tmux server or create it

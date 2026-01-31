@@ -19,19 +19,19 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Paste and preserve
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", '"_dP')
 
 -- Copy to system clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>y", "\"+Y")
-vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>y", '"+Y')
+vim.keymap.set("v", "<leader>y", '"+y')
 
 -- Git
-vim.keymap.set("n", "<leader>gs", "<cmd>topleft vert Git<CR>");
-vim.keymap.set("n", "<leader>dif", vim.cmd.Gvdiffsplit);
-vim.keymap.set("n", "<leader>res", "<cmd>Gitsigns reset_hunk<CR>");
-vim.keymap.set("n", "<leader>prev", "<cmd>Gitsigns preview_hunk<CR>");
-vim.keymap.set("n", "<leader>bl", "<cmd>Gitsigns toggle_current_line_blame<CR>");
+vim.keymap.set("n", "<leader>gs", "<cmd>topleft vert Git<CR>")
+vim.keymap.set("n", "<leader>dif", vim.cmd.Gvdiffsplit)
+vim.keymap.set("n", "<leader>res", "<cmd>Gitsigns reset_hunk<CR>")
+vim.keymap.set("n", "<leader>prev", "<cmd>Gitsigns preview_hunk<CR>")
+vim.keymap.set("n", "<leader>bl", "<cmd>Gitsigns toggle_current_line_blame<CR>")
 
 -- File runners
 vim.keymap.set("n", "<leader>rf", "<cmd>!ts-node %<CR>")
@@ -49,7 +49,7 @@ vim.keymap.set("n", "<leader>k", "gg")
 vim.keymap.set("n", "<leader>l", "$")
 
 -- Misc
-vim.keymap.set('n', '<leader>cp', '<cmd>let @+=@%<CR>')
-vim.keymap.set('n', ',', ':')
+vim.keymap.set("n", "<leader>cp", "<cmd>let @+=@%<CR>")
+vim.keymap.set("n", ",", ":")
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>open", "<cmd>!open % -a /Applications/Arc.app<CR>");
+vim.keymap.set("n", "<leader>open", "<cmd>!open % -a /Applications/Arc.app<CR>")

@@ -18,18 +18,17 @@ source ~/.config/env/requiem/utils.sh
 source ~/.config/env/requiem/quick_files.sh
 source ~/.config/env/requiem/quick_directories.sh
 
-# StoryFit
-source ~/.config/env/storyfit/project_scripts.sh
-source ~/.config/env/storyfit/tmux.sh
-
 # KindHealth
 source ~/.config/env/kindhealth/tmux.sh
 source ~/.config/env/kindhealth/utils.sh
 
 # WiseRock
 source ~/.config/env/wiserock/main.sh
-source ~/.config/env/wiserock/tmux.sh
 source ~/.config/env/wiserock/project_scripts.sh
+
+# Ledor
+source ~/.config/env/ledor/main.sh
+source ~/.config/env/ledor/project_scripts.sh
 
 function source_env() {
     source ~/.config/env/main.sh

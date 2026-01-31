@@ -3,5 +3,8 @@
 -- Add any additional options here
 
 vim.g.snacks_animate = false
+vim.g.netrw_banner = 0
 
 vim.opt.guicursor = ""
+vim.opt.mouse = ""
+vim.opt.clipboard = ""
