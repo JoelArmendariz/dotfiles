@@ -8,10 +8,32 @@ export default function writeDefault() {
     rule("Key mapping").manipulators([
       ...COMMON_REMAPS,
       map("/").to("left_shift").toIfAlone("/"),
-      map("right⌘").to("left_control"),
       map(";").to(";", "right_shift"),
-      map("right⌘").to("right_control"),
       map(";", "left_shift").to(";"),
+    ]),
+
+    rule("Right Command Meta Layer").manipulators([
+      // Tmux prefix (Ctrl+b) + window numbers
+      map("x", "right_command").to("b", "left_control").to("1"),
+      map("c", "right_command").to("b", "left_control").to("2"),
+      map("v", "right_command").to("b", "left_control").to("3"),
+      map("b", "right_command").to("b", "left_control").to("4"),
+      // Tmux prefix + navigation/commands
+      map("s", "right_command").to("b", "left_control").to("s"),
+      map("d", "right_command").to("b", "left_control").to("d"),
+      map("h", "right_command").to("b", "left_control").to("h"),
+      map("j", "right_command").to("b", "left_control").to("j"),
+      map("k", "right_command").to("b", "left_control").to("k"),
+      map("l", "right_command").to("b", "left_control").to("l"),
+      map("n", "right_command").to("b", "left_control").to("0", "left_shift"), // next session
+      map("p", "right_command").to("b", "left_control").to("9", "left_shift"), // previous session
+      // Ctrl + numbers (for other app shortcuts)
+      map("q", "right_command").to("1", "left_control"),
+      map("w", "right_command").to("2", "left_control"),
+      map("e", "right_command").to("3", "left_control"),
+      map("r", "right_command").to("4", "left_control"),
+      map("t", "right_command").to("5", "left_control"),
+      map("y", "right_command").to("6", "left_control"),
     ]),
 
     simlayer("⎋").manipulators([
