@@ -51,6 +51,42 @@ function te2e() {
   tmux select-window -t "$SESSION_NAME:docker"
 }
 
+function z1() {
+  local SESSION_NAME="tree1"
+
+  if zellij ls 2>&1 | grep -q "$SESSION_NAME" && ! zellij ls 2>&1 | grep "$SESSION_NAME" | grep -q "EXITED"; then
+    zellij attach "$SESSION_NAME"
+    return
+  fi
+
+  zellij --session "$SESSION_NAME" --new-session-with-layout wr-dev
+}
+
+function z2() {
+  local SESSION_NAME="tree2"
+
+  if zellij ls 2>&1 | grep -q "$SESSION_NAME" && ! zellij ls 2>&1 | grep "$SESSION_NAME" | grep -q "EXITED"; then
+    zellij attach "$SESSION_NAME"
+    return
+  fi
+
+  zellij --session "$SESSION_NAME" --new-session-with-layout wr-dev
+}
+
+function z3() {
+  local SESSION_NAME="tree3"
+
+  if zellij ls 2>&1 | grep -q "$SESSION_NAME" && ! zellij ls 2>&1 | grep "$SESSION_NAME" | grep -q "EXITED"; then
+    zellij attach "$SESSION_NAME"
+    return
+  fi
+
+  zellij --session "$SESSION_NAME" --new-session-with-layout wr-dev
+}
+
+function zkill() {
+  z kill-all-sessions
+}
 
 function tw1() {
   local SESSION_NAME="${1:-tree1}"

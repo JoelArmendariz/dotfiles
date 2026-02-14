@@ -1,5 +1,8 @@
-layout {
+layout name="tree 1" {
     default_tab_template {
+        pane size=2 borderless=true {
+            plugin location="status-bar"
+        }
         children
         pane size=1 borderless=true {
             plugin location="compact-bar"
@@ -21,7 +24,7 @@ layout {
         }
     }
 
-    tab name="dev" cwd="~/repos/wise-rock-trees/wise-rock" {
+    tab name="dev" focus=true cwd="~/repos/wise-rock-trees/wise-rock" {
         pane name="dev" borderless=true
     }
 
